@@ -7,4 +7,3 @@ from datetime import date
 # cd week2/assignment-2
 today = input("What is the date today? ")
 print(f"You said today is {today}.")
- .
