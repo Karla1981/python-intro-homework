@@ -7,6 +7,6 @@ for key, value in student.items():
     print(f"{key}: {value}")
 
 # Add a new key "graduated" with the value False
-student["graduate"] = False
+student["graduated"] = False
 # Print the updated dictionary
 print(f"Student: {student}")
