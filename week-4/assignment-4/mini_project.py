@@ -10,18 +10,15 @@ students = [
     {"name": "Eli",     "score": 79, "subject": "Data"},
 ]
 
-# Find the top scorer - loop through the list and track the 
-# highest score and the name that goes with it - Do not use 
-# Python buld in  max() on the list directly.
-highest_score = 0 
-top_scorer = "" 
+# Find the top scorer - 
+highest_score = 0 #placeholder
+top_scorer = "" # name holder
 
 # loop 
 for student in students:
     if student["score"] > highest_score:
         highest_score = student["score"]
         top_scorer = student["name"]
-
 print(f"Top scorer is: {top_scorer} with a score of: {highest_score}")
 
 # Calculate the class avg
