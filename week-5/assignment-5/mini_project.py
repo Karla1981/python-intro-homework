@@ -29,8 +29,7 @@ while True:
     print("5. Quit")
     print("Choose an option (1-5): ")
     print("==========================")
-    
-    print()
+
     try:
         user_input = int(input("Enter an option number from the menu: "))
         # user input = 1 find min
@@ -53,10 +52,13 @@ while True:
 
         # user input = 3 find a number
         elif user_input == 3:
-            user_input_num = int(input("Enter a number: "))
-            result = linear_search(numbers, user_input_num)
-            print(f"Found at index: {result}")
-            print()
+            try:
+                user_input_num = int(input("Enter a number: "))
+                result = linear_search(numbers, user_input_num)
+                print(f"Found at index: {result}")
+                print()
+            except ValueError:
+                 print("That's not a valid number. Try again.")
 
         # user input = 4 sort the list
         elif user_input == 4:
