@@ -15,7 +15,7 @@ while True:
     print("==========================")
     
     print()
-    user_input = int(input("Enter an integer: "))
+    user_input = int(input("Enter an option number from the menu: "))
     # user input is equal to x
     if user_input == 1:
         # user input = 1 find min
@@ -28,11 +28,11 @@ while True:
 
     elif user_input == 2:
         # user input = 2 find max
-        largest_number = numbers[0]
+        max_number = numbers[0]
         for number in numbers:
-            if number > largest_number:
-                largest_number = number
-        print(f"The min number is: {min_number}")
+            if number > max_number:
+                max_number = number
+        print(f"The maximun number is: {max_number}")
         print()
 
     elif user_input == 3:
@@ -42,8 +42,9 @@ while True:
                     print(f"The number is: {target}")
                     return i
             return -1
-        result = linear_search(numbers, 8)
-        print(f"At index: {result}")
+        user_input_num = int(input("Enter a number: "))
+        result = linear_search(numbers, user_input_num)
+        print(f"Found at index: {result}")
         print()
 
     # user input = 4 sort the list
