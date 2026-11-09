@@ -7,5 +7,5 @@ while True: # infinite loop...
         else:
             print(f"That's not a positive integer. Try again.")
     except ValueError: # if error then ask again
-        print(f"That's not a positive integer. Try again.")
+        print(f"That's not a valid integer. Try again.")
 print(f"Got it: {positive_num}") # print the positive integer

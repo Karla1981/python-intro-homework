@@ -6,7 +6,6 @@ numbers = [42, 17, 83, 5, 61, 29, 74, 8, 55, 93, 31, 66, 14, 47, 78, 3, 59, 22, 
 def linear_search(numbers, target):
             for i in range(len(numbers)):
                 if numbers[i] == target:
-                    print(f"The number is: {target}")
                     return i
             return -1
 # bubble sort - sort the numbers data
@@ -71,7 +70,7 @@ while True:
             print("Good bye!")
             break
     except ValueError:
-         print(f"That's not an option from the menu. Try again.")
+         print(f"That's not a valid number. Try again.")
          print()
 
 
