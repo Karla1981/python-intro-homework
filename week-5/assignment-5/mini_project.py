@@ -69,8 +69,6 @@ while True:
     elif user_input == 5:
         print("Good bye!")
         break
-    else:
-        break
 
 
 

@@ -12,7 +12,6 @@ index_name = 0
 for name in names:
     if name == user_input:
         found = True
-        print("found at index", index_name)
         break
     index_name +=1
 if found:
