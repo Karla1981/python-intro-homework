@@ -32,44 +32,47 @@ while True:
     print("==========================")
     
     print()
-    user_input = int(input("Enter an option number from the menu: "))
-    # user input = 1 find min
-    if user_input == 1:
-        min_number = numbers[0]
-        for number in numbers:
-            if number < min_number:
-                min_number = number
-        print(f"The min number is: {min_number}")
-        print()
+    try:
+        user_input = int(input("Enter an option number from the menu: "))
+        # user input = 1 find min
+        if user_input == 1:
+            min_number = numbers[0]
+            for number in numbers:
+                if number < min_number:
+                    min_number = number
+            print(f"The min number is: {min_number}")
+            print()
 
-    # user input = 2 find max
-    elif user_input == 2:
-        max_number = numbers[0]
-        for number in numbers:
-            if number > max_number:
-                max_number = number
-        print(f"The maximun number is: {max_number}")
-        print()
+        # user input = 2 find max
+        elif user_input == 2:
+            max_number = numbers[0]
+            for number in numbers:
+                if number > max_number:
+                    max_number = number
+            print(f"The maximun number is: {max_number}")
+            print()
 
-    # user input = 3 find a number
-    elif user_input == 3:
-        user_input_num = int(input("Enter a number: "))
-        result = linear_search(numbers, user_input_num)
-        print(f"Found at index: {result}")
-        print()
+        # user input = 3 find a number
+        elif user_input == 3:
+            user_input_num = int(input("Enter a number: "))
+            result = linear_search(numbers, user_input_num)
+            print(f"Found at index: {result}")
+            print()
 
-    # user input = 4 sort the list
-    elif user_input == 4:
+        # user input = 4 sort the list
+        elif user_input == 4:
         
-        print("List sorted implementing bubble sort: ")
-        print(bubble_sort(numbers))
-        print()
+            print("List sorted implementing bubble sort: ")
+            print(bubble_sort(numbers))
+            print()
 
-    # user input = 5 quit
-    elif user_input == 5:
-        print("Good bye!")
-        break
-
+        # user input = 5 quit
+        elif user_input == 5:
+            print("Good bye!")
+            break
+    except ValueError:
+         print(f"That's not an option from the menu. Try again.")
+         print()
 
 
         
