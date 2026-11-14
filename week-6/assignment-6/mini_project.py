@@ -12,11 +12,15 @@ def main():
         elif option == 2:
             print(f"The max number is: {find_max(numbers)}")
             print()
+
         elif option == 3:
             try:
                 user_input_num = int(input("Enter a number: "))
                 result = search(numbers, user_input_num)
-                print(f"Found at index: {result }")
+                if result == -1:
+                    print("Not found")
+                else:
+                    print(f"Found at index: {result}")
                 print()
             except ValueError:
                 print("That's not a valid number. Try again.")
