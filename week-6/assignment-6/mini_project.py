@@ -10,7 +10,8 @@ def main():
             print()
 
         elif option == 2:
-            print(f"The max  umber is: {find_max(numbers)}")
+            print(f"The max number is: {find_max(numbers)}")
+            print()
         elif option == 3:
             try:
                 user_input_num = int(input("Enter a number: "))
@@ -20,14 +21,16 @@ def main():
             except ValueError:
                 print("That's not a valid number. Try again.")
                 print()
+
         elif option == 4:
-            print(f"The sort list is: {bubble_sort(numbers)}")
+            print(f"The sorted list is: {bubble_sort(numbers)}")
+            print()
+
         elif option == 5:
             print("Good bye!")
             break
         else:
-            print("Invalid score. Please enter a number from 1 to 5.")
-
+            print("Invalid number. Please enter a number from 1 to 5.")
 
 #user_input = int(input("Enter an option number from the menu: "))
 def show_menu():
@@ -67,14 +70,16 @@ def search(numbers, target):
 
 # Function that returns a sorted list - Bubble sort
 def bubble_sort(numbers):
+    new_sorted_numbers = numbers[:]
+    #print(new_sorted_numbers)
     swapped = True
     while swapped:
         swapped = False
-        for i in range(len(numbers) - 1):
-            if numbers[i] > numbers[i + 1]:
-                numbers[i], numbers[i + 1] = numbers[i + 1], numbers[i]
+        for i in range(len(new_sorted_numbers) - 1):
+            if new_sorted_numbers[i] > new_sorted_numbers[i + 1]:
+                new_sorted_numbers[i], new_sorted_numbers[i + 1] = new_sorted_numbers[i + 1], new_sorted_numbers[i]
                 swapped = True
-    return numbers
+    return new_sorted_numbers
     
 # call main function
 if __name__ == "__main__":
