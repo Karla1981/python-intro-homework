@@ -8,6 +8,7 @@ if os.path.exists("../data/expenses.csv"):
     print("../data/expenses.csv found")
 else:
     print("File not found.")
+    csv.exit()
 
 # Read expenses.csv into a list of dics using vsv.DictReader
 with open("../data/expenses.csv", "r") as file:
@@ -32,7 +33,7 @@ print(today)
 # Using with closes the file as soon as done going over it withouth the need
 # of specifying f.close()
 with open("food_report.txt", "w", encoding="utf_8") as report:
-    report.write(f"Food Expence Repor - generated {today}\n")
+    report.write(f"Food Expense Report - generated {today}\n")
 
     for item in one_category:
         date =item['date']
