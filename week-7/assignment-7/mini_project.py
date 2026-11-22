@@ -16,7 +16,7 @@ with open("../data/expenses.csv", "r") as file:
     
     for item in records:
         amount = float(item['amount'])
-        print(item['category'], item['description'], item['amount'])
+        #print(item['category'], item['description'], item['amount'])
 
 # Filter to 'food' category
 one_category = [item for item in records if item['category'] == 'Food']
@@ -33,7 +33,7 @@ print(today)
 # Using with closes the file as soon as done going over it withouth the need
 # of specifying f.close()
 with open("food_report.txt", "w", encoding="utf_8") as report:
-    report.write(f"Food Expense Report - generated {today}\n")
+    report.write(f"Food Expense Report \u2014 generated {today}\n")
 
     for item in one_category:
         date =item['date']
