@@ -10,15 +10,15 @@ else:
     print("File not found.")
     exit()
 
-# Read expenses.csv into a list of dics using vsv.DictReader
+# Read expenses.csv into a list of dictionaries using vsv.DictReader
 with open("../data/expenses.csv", "r") as file:
     records = list(csv.DictReader(file))
     
     for item in records:
         amount = float(item['amount'])
-        #print(item['category'], item['description'], item['amount'])
+        print(item['amount'])
 
-# Filter to 'food' category
+# Filter to the food category
 one_category = [item for item in records if item['category'] == 'Food']
 
 
