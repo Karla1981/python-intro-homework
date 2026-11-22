@@ -10,7 +10,6 @@ else:
     print("File not found.")
 
 # Read expenses.csv into a list of dics using vsv.DictReader
-import csv
 with open("../data/expenses.csv", "r") as file:
     records = list(csv.DictReader(file))
     
@@ -23,7 +22,7 @@ one_category = [item for item in records if item['category'] == 'Food']
 print(f"food category only: {one_category}")
 
 # Calculate the total amount spent on Food
-total_amount = int(sum(float(item['amount']) for item in one_category))
+total_amount = sum(float(item['amount']) for item in one_category)
 print(f"Food Total Amount: {total_amount:.2f}")
 
 #6. Write a report to food_report.txt
@@ -34,11 +33,9 @@ print(today)
 # of specifying f.close()
 with open("food_report.txt", "w", encoding="utf_8") as report:
     report.write(f"Food Expence Repor - generated {today}\n")
-    print("-------------------------------------------------")
-    print()
 
     for item in one_category:
         date =item['date']
         amount = float(item['amount'])
-        report.write(f"{date} -- {amount:.2f}\n")
+        report.write(f"{date}: ${amount:.2f}\n")
     report.write(f"Total: ${total_amount:.2f}\n")
