@@ -8,7 +8,7 @@ if os.path.exists("../data/expenses.csv"):
     print("../data/expenses.csv found")
 else:
     print("File not found.")
-    csv.exit()
+    exit()
 
 # Read expenses.csv into a list of dics using vsv.DictReader
 with open("../data/expenses.csv", "r") as file:
@@ -20,7 +20,7 @@ with open("../data/expenses.csv", "r") as file:
 
 # Filter to 'food' category
 one_category = [item for item in records if item['category'] == 'Food']
-print(f"food category only: {one_category}")
+
 
 # Calculate the total amount spent on Food
 total_amount = sum(float(item['amount']) for item in one_category)

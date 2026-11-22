@@ -6,7 +6,7 @@ print(os.getcwd())
 if os.path.exists("../data/expenses.csv"):
     print("expenses.csv found.")
 else:
-    print("expenses.csv file not found.")
+    print("expenses.csv not found.")
 
 # 3 - Use os.path.join() tobuild the path
 path = os.path.join("..", "data", "expenses.csv")
